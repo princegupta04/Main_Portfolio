@@ -194,3 +194,20 @@ button:hover, input[type="button"]:hover {
         text-align: right;
     }
 }
+
+/* General Styles for Images */
+img {
+    max-width: 100%; /* Ensures the image does not exceed the container width */
+    height: auto;    /* Maintains the aspect ratio */
+    display: block;  /* Removes inline spacing below the image */
+    margin: 0 auto;  /* Centers the image */
+    border-radius: 10px; /* Adds rounded corners for better aesthetics */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a soft shadow for a modern look */
+}
+
+/* Specific Styling for Image Containers */
+.image-container {
+    max-width: 600px; /* Optional: Set a max width for images if needed */
+    margin: 20px auto; /* Center the container with space around */
+    text-align: center;
+}
