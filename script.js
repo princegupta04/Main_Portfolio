@@ -1,21 +1,25 @@
-console.log("script is running");
-document.querySelector('.cross').style.display =' none';
+console.log("Script is running");
 
-document.querySelector('.hamburger').addEventListener("click", ()=>{
-   
-    document.querySelector('.sidebar').classList.toggle('sidebargo');
+// Cache frequently accessed elements
+const crossIcon = document.querySelector('.cross');
+const hamIcon = document.querySelector('.ham');
+const sidebar = document.querySelector('.sidebar');
+const hamburger = document.querySelector('.hamburger');
 
-    if(document.querySelector('.sidebar').classList.contains('sidebargo'))
-{
-    document.querySelector('.cross').style.display ="none";
-    document.querySelector('.ham').style.display ="inline";
-}
-else{
-    document.querySelector('.ham').style.display ="none";
-    setTimeout(()=>{
-        document.querySelector('.cross').style.display ="inline";
-    },1500);
-   
-}
-})
+// Initial setup
+crossIcon.style.display = 'none';
 
+// Toggle sidebar visibility
+hamburger.addEventListener("click", () => {
+    sidebar.classList.toggle('sidebargo');
+
+    if (sidebar.classList.contains('sidebargo')) {
+        // Sidebar is hidden
+        crossIcon.style.display = "none";
+        hamIcon.style.display = "inline";
+    } else {
+        // Sidebar is visible
+        hamIcon.style.display = "none";
+        crossIcon.style.display = "inline";
+    }
+});
